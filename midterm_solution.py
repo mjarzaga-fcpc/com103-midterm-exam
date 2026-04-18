@@ -34,3 +34,28 @@ for i in range(4):
     elif choice == 0:
         print("Skipped")
         break
+
+
+print("=" * 50)
+print(f"{student_name} - Weekly Expense Log")
+print("=" * 50)
+print(f"Weekly Budget: P{weekly_budget}")
+total = 0
+for z in range(len(list_budget)):
+    choice = list_budget[z][0]
+    total +=  list_budget[z][3]
+    amount_int = list_budget[z][3]
+    high_expenses = ""
+    if list_budget[z][2]: 
+        high_expenses = "! High Expenses Alert!"
+    print(f"[{choice}] {list_expenses[choice-1][1]} \n {list_budget[z][1]:<45} P{amount_int} {high_expenses}")
+print("-" * 50)
+remaining = weekly_budget - total
+sub_total = remaining
+
+if remaining >= 0: 
+    print(f"Total:", total)
+    print(f"Remaining: ", remaining)
+    print("Budget Okay! Keep it up.")
+else:
+    print("Overspent! Reduce spending.!")
