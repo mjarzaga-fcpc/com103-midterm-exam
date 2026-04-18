@@ -1,0 +1,1 @@
+This program is a simple student expense tracker that records up to four expenses based on a weekly budget. It calculates the total spending, shows remaining budget, and warns if the user overspends or has high expenses.
